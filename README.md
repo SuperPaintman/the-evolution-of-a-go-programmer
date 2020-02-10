@@ -90,6 +90,22 @@ func Factorial(n int) int {
 }
 ```
 
+## Compiler optimized Go programmer
+```go
+package fac
+
+func Factorial(n int) int {
+    return factorialWithProduct(n, 1)
+}
+
+func factorialWithProduct(n, prd int) int {
+    if n == 0 {
+        return prd
+    }
+    return factorialWithProduct(n - 1, prd * n)
+}
+```
+
 ## Discovered Go patterns
 
 ```go
