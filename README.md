@@ -91,6 +91,7 @@ func Factorial(n int) int {
 ```
 
 ## Compiler optimized Go programmer
+
 ```go
 package fac
 
