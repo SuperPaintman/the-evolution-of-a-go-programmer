@@ -129,7 +129,7 @@ type IFactorial interface {
 }
 
 // FactorialImpl implements IFactorial.
-var _ IFactorial = (nil)(*FactorialImpl)
+var _ IFactorial = (*FactorialImpl)(nil)
 
 /**
  * Used to find factorial of the n.
@@ -183,7 +183,10 @@ func (this *FactorialImpl) CalculateFactorial() int {
 		return 1
 	}
 
-	return this.CalculateFactorial(this.n - 1) * this.n
+	n := this.n
+	this.n = this.n - 1
+
+	return this.CalculateFactorial() * n
 }
 ```
 
