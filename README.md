@@ -199,7 +199,7 @@ package fac
 func Factorial(n int) int {
 	res := 1
 
-	for i := 1; i <= n; i++ {
+	for i := 2; i <= n; i++ {
 		res *= i
 	}
 
@@ -216,7 +216,7 @@ package fac
 func Factorial(n int) int {
 	res := 1
 
-	for i := 1; i <= n; i++ {
+	for i := 2; i <= n; i++ {
 		res *= i
 	}
 
