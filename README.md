@@ -195,7 +195,7 @@ func (this *FactorialImpl) CalculateFactorial() int {
 ```go
 package fac
 
-// Factorial returns !n.
+// Factorial returns n!.
 func Factorial(n int) int {
 	res := 1
 
@@ -212,7 +212,7 @@ func Factorial(n int) int {
 ```text
 package fac
 
-// Factorial returns !n.
+// Factorial returns n!.
 func Factorial(n int) int {
 	res := 1
 
