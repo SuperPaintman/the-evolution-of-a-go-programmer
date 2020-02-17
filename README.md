@@ -210,17 +210,20 @@ func Factorial(n int) int {
 ## Rob Pike
 
 ```text
-package fac
-
-// Factorial returns n!.
-func Factorial(n int) int {
-	res := 1
-
-	for i := 1; i <= n; i++ {
-		res *= i
+func factorial(n int64) (*big.Int, error) {
+	if n < 0 {
+		return nil, fmt.Errorf("negative value %d for factorial", n)
 	}
-
-	return res
+	fac := big.NewInt(1)
+	if n == 0 {
+		return fac
+	}
+	x := big.NewInt(0)
+	for i := int64(2); i <= n; i++ {
+		x.SetInt64(i)
+		fac.Mul(fac, x)
+	}
+	return fac
 }
 ```
 
