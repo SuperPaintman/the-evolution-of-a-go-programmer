@@ -209,7 +209,7 @@ func Factorial(n int) int {
 
 ## Rob Pike
 
-```text
+```go
 package fac
 
 // Factorial returns n!.
